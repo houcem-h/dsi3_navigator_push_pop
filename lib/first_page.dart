@@ -1,5 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import './second_page.dart';
 
 class MyFirstPage extends StatelessWidget {
   const MyFirstPage({Key? key, required this.title}) : super(key: key);
@@ -30,7 +31,14 @@ class MyFirstPage extends StatelessWidget {
               child: const Text("Next Screen"),
                 color: Colors.teal,
                 textColor: Colors.white,
-                onPressed: null
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => MySecondPage(title: title)
+                    ),
+                  );
+                }
             ),
           ],
         ),
