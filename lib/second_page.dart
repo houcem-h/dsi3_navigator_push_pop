@@ -29,7 +29,9 @@ class MySecondPage extends StatelessWidget {
               child: const Text("Previous Screen"),
                 color: Colors.teal,
                 textColor: Colors.white,
-                onPressed: null
+                onPressed: () {
+                  Navigator.pop(context);
+                }
             ),
           ],
         ),
